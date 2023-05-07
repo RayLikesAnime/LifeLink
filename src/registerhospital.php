@@ -56,7 +56,7 @@ echo "<script type='text/javascript'>alert('$message');</script>";
             <ul class="flex justify-evenly mr-8">
                 <li class="text-lg font-semibold px-4"><a href="./Userpage.php">Home</a></li>
                 <li class="text-lg font-semibold px-4">
-                    <form action="./login.php" method="post">
+                    <form action="./Login.php" method="post">
                          <input type="submit" name="logout" value="Logout">
                     </form>
                 </li>
@@ -66,7 +66,7 @@ echo "<script type='text/javascript'>alert('$message');</script>";
     <h1 class=" flex justify-center decoration-solid text-black text-4xl font-bold mt-10">Register New Hospital</h1>
 
     <div class="flex justify-center mt-8">
-    <form class="w-full max-w-lg " action="./registerHospital.php" method="post">
+    <form class="w-full max-w-lg " action="./registerhospital.php" method="post">
         <div class="flex flex-wrap mt-3 mx-3 mb-6">
         <div class="w-full px-3">
         <label class="text-gray-700 text-l font-bold mb-2">

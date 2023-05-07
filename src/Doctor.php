@@ -47,13 +47,13 @@ if(isset($_POST['logout'])){
         </nav>
     </header>
     <div class="flex justify-center">
-    <a href="./registerdoctor.php">
+    <a href="./registerDoctor.php">
 <button class="bg-red-500  text-white mt-10 py-4 px-80 hover:bg-red-700  rounded border-red-500 ">
   Register Doctor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </button></a>
 </div>
 <div class="flex justify-center" >
-<a href="./searchdoctor.php">
+<a href="./searchDoctor.php">
 <button class="bg-red-500 text-white py-4 px-80 mt-1 hover:bg-red-700 rounded border-red-500">
   Search Doctor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </button>
