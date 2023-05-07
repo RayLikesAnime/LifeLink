@@ -39,7 +39,7 @@ if(isset($_POST['logout'])){
             <ul class="flex justify-evenly mr-8">
                 <li class="text-lg font-semibold px-4"><a href="./Userpage.php">Home</a></li>
                 <li class="text-lg font-semibold px-4">
-                    <form action="./Userpage.php" method="post">
+                    <form action="./Login.php" method="post">
                          <input type="submit" name="logout" value="logout">
                     </form>
                 </li>
@@ -47,7 +47,7 @@ if(isset($_POST['logout'])){
         </nav>
     </header>
     <div class="flex justify-center">
-    <a href="./registerdonor.php">
+    <a href="./registerDonor.php">
 <button class="bg-red-500  text-white mt-10 py-4 px-80 hover:bg-red-700  rounded border-red-500 ">
   Register Donor
 </button></a>

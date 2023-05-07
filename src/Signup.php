@@ -32,7 +32,7 @@
         if($num==0){
             if(($password == $cpassword) && $exists==false){
                 $hash=password_hash($password,PASSWORD_DEFAULT);
-                $sql="INSERT INTO `login` (`username`, `password`, `login_ID`) VALUES ('$username', '$password', NULL);";
+                $sql="INSERT INTO `login` (`username`, `password`, `login_lD`) VALUES ('$username', '$password', NULL);";
                 $result = mysqli_query($conn, $sql); 
                 if ($result) {
                     $showAlert = true; 
