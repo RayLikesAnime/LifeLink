@@ -52,8 +52,12 @@ if(isset($_POST['logout'])){
                 <div class="text-black font-semibold text-2xl p-2">
                     How can we help you today?
                 </div>
-                <button class="p-3    border border-red text-s rounded-3xl"><a href="./transplants.php">Transplants</a><button> 
-                <button class="p-3   border border-red rounded-3xl"><a href="./organsuserpage.php">Show all organs</a><button> 
+                <!-- put these buttons in flexbox -->
+                <div class="flex">
+                    <button class="p-3 ml-12 mr-7 border border-red text-s rounded-3xl"><a href="./transplants.php">Transplants</a><button> 
+                    <button class="p-3   border border-red rounded-3xl"><a href="./organsuserpage.php">Show all organs</a><button> 
+                </div>
+                
             </div>
             <div class="w-1/2 flex justify-center items-center">
                 <img src="./images/welcome.jpg" alt="welcome" class="h-64" >
@@ -65,28 +69,28 @@ if(isset($_POST['logout'])){
                <img src="./images/patient.png" alt="patient" class="mx-auto pt-4">
                <h3 class="text-xl font-semibold text-center pt-4">Patients</h3>
                <div class="flex justify-center mt-6">
-                    <button class="p-3 border border-white rounded-3xl"><a href="./patient.php">Got to patients</a><button> 
+                    <button class="p-3 border border-white rounded-3xl"><a href="./patient.php">Go to patients</a><button> 
                </div>
             </div>
             <div class="w-64 h-64 bg-black text-white rounded-3xl p-4">
               <img src="./images/donor.png" alt="donor" class="mx-auto pt-4">
                <h3 class="text-xl font-semibold text-center pt-4">Donors</h3>
                <div class="flex justify-center mt-6">
-                    <button class="p-3 border border-white rounded-3xl"><a href="./Donor.php">Got to Donors</a><button> 
+                    <button class="p-3 border border-white rounded-3xl"><a href="./Donor.php">Go to Donors</a><button> 
                </div>
             </div>
             <div class="w-64 h-64 bg-black text-white rounded-3xl p-4">
                 <img src="./images/doctor.png" alt="doctor" class="mx-auto pt-4">
                <h3 class="text-xl font-semibold text-center pt-4">Doctors</h3>
                <div class="flex justify-center mt-6">
-                    <button class="p-3 border border-white rounded-3xl"><a href="./Doctor.php">Got to Doctors</a><button> 
+                    <button class="p-3 border border-white rounded-3xl"><a href="./Doctor.php">Go to Doctors</a><button> 
                </div>
             </div>
             <div class="w-64 h-64 bg-black text-white rounded-3xl p-4">
                 <img src="./images/hospital.png" alt="hospital" class="mx-auto pt-4">
                <h3 class="text-xl font-semibold text-center pt-4">Hospitals</h3>
                <div class="flex justify-center mt-6">
-                    <button class="p-3 border border-white rounded-3xl"><a href="./Hospital.php">Got to Hospitals</a><button> 
+                    <button class="p-3 border border-white rounded-3xl"><a href="./Hospital.php">Go to Hospitals</a><button> 
                </div>
             </div>
             <div class="w-64 h-64 bg-black text-white rounded-3xl p-4">
