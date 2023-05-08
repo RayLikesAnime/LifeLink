@@ -40,8 +40,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 
     $sql1="INSERT INTO `donor` (`first_name`, `last_name`, `age`,`Blood_group`,`medical_history`, `doctor`, `address`,`address2`, `address3`, `phone`) VALUES ('$first_name', '$last_name','$age',  '$Blood_group', '$medical_history','$doctor', '$address','$address2', '$address3','$phone');";
     $result1=mysqli_query($conn, $sql1);
-    $sql2 = "INSERT INTO `organs` (`Donor_id`, `organ`)
-         SELECT `Donor_ID`, '$organ'
+    $sql2 = "INSERT INTO `organs` (`Donor_id`, `organ`, `status`)
+         SELECT `Donor_ID`, '$organ', 'YES'
          FROM `donor`
          WHERE `first_name` = '$first_name' AND `last_name`='$last_name' AND `age` = '$age' AND `medical_history` = '$medical_history' AND `doctor` = '$doctor' AND `address` = '$address' AND `address2` = '$address2' AND `address3` = '$address3' AND`phone` = '$phone' AND `Blood_group`='$Blood_group'";
     $result2=mysqli_query($conn, $sql2);
