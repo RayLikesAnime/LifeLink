@@ -70,30 +70,30 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         <label class="text-gray-700 text-l font-bold mb-2" for="grid-first-name">
             Patient ID
         </label>
-        <a href="searchpatient.php" target ="_blank"><div class="text-blue-700 underline hover:underline-offset-4 ml-48"> view id</div></a>
-        <input class=" w-full  text-gray-700 border rounded py-3 px-4 mb-3 " id="grid-first-name" name="patient_ID"" type="text">
+        <a href="searchpatient.php" target ="_blank"><div class="text-blue-700 underline hover:underline-offset-4 ml-24"> View All Patient IDs</div></a>
+        <input class=" w-full  text-gray-700 border rounded py-3 px-4 mb-3 " id="grid-first-name" name="patient_ID"" type="text" required>
         </div>
         <div class="w-full md:w-1/2 px-3">
         <label class="text-gray-700 text-l font-bold mb-2" for="grid-last-name">
             Organ ID
         </label>
-        <a href="organs.php" target ="_blank"><div class="text-blue-700 underline hover:underline-offset-4 ml-48"> view id</div></a>
-        <input class=" w-full text-gray-700 border rounded py-3 px-4 id="grid-last-name" name="organ_ID" type="text">
+        <a href="organs.php" target ="_blank"><div class="text-blue-700 underline hover:underline-offset-4 ml-24"> View All Organ IDs</div></a>
+        <input class=" w-full text-gray-700 border rounded py-3 px-4 id="grid-last-name" name="organ_ID" type="text" required>
         </div>
         <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
         <label class="text-gray-700 text-l font-bold mb-2" for="grid-first-name">
             Date
         </label>
-        <input class=" w-full text-gray-700 border rounded py-3 px-4 mb-3 " id="grid-first-name" name="date" type="text">
+        <input class=" w-full text-gray-700 border rounded py-3 px-4 mb-3 " id="grid-first-name" name="date" type="date" required>
         </div>
         <div class="w-full px-3">
         <label class="text-gray-700 text-l font-bold mb-2" for="grid-password">
             Status
         </label>
-        <input class="w-full text-gray-700 border  rounded py-3 px-4 mb-3 " id="grid-password" name="status">
+        <input class="w-full text-gray-700 border  rounded py-3 px-4 mb-3 " id="grid-password" name="status" required>
         </div>
     </div>
-    <button class="bg-red-500 text-white px-4 py-2 rounded-lg mt-2 mb-6 ml-48 " type="submit">Success!</button>
+    <button class="bg-red-500 text-white px-4 py-2 rounded-lg mt-2 mb-6 ml-36 " type="submit">Register New Transplant</button>
 </form>
     </div>
     <div class="flex justify-center">

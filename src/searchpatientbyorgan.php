@@ -54,7 +54,7 @@ if(isset($_POST['logout'])){
         <form action="./searchpatientbyorgan.php" method="post" class="my-10">
             <div class="flex flex-col rounded-2">
                 <input class="py-3 px-4 mt-2 text-gray-800  border-2" type="text" name="organ"
-                    placeholder="Enter Organ">
+                    placeholder="Enter Organ" required>
                 <button class="py-3 px-4 mt-4 bg-red-500 hover:bg-red-700 text-gray-100" type="submit">Submit</button>
             </div>
         </form>
