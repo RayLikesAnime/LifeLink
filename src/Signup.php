@@ -25,22 +25,30 @@
         $username=$_POST["username"];
         $password=$_POST["password"];
         $cpassword=$_POST["cpassword"];
-
+        
+        
         $sql="SELECT * FROM `login` where `username`='$username'";
         $res=mysqli_query($conn,$sql);
         $num=mysqli_num_rows($res);
         if($num==0){
-            if(($password == $cpassword) && $exists==false){
-                $hash=password_hash($password,PASSWORD_DEFAULT);
-                $sql="INSERT INTO `login` (`username`, `password`, `login_lD`) VALUES ('$username', '$password', NULL);";
-                $result = mysqli_query($conn, $sql); 
-                if ($result) {
-                    $showAlert = true; 
+            //validate password atleast 6 characters
+            if(strlen($password)<6){
+                $showError="Password must be atleast 6 characters";
+            }
+            else{
+                if(($password == $cpassword) && $exists==false){
+                    $hash=password_hash($password,PASSWORD_DEFAULT);
+                    $sql="INSERT INTO `login` (`username`, `password`, `login_lD`) VALUES ('$username', '$password', NULL);";
+                    $result = mysqli_query($conn, $sql); 
+                    if ($result) {
+                        $showAlert = true; 
+                    }
+                }
+                else { 
+                    $showError = "Passwords do not match"; 
                 }
             }
-            else { 
-                $showError = "Passwords do not match"; 
-            }
+            
         } 
         if($num>0){
             $exists="Either username not available or you already have an account";
@@ -86,9 +94,9 @@
                 <h1 class="font-semibold text-3xl">Enter the details of the new admin</h1>
                 <form action="./Signup.php" method="post">
                     <div class="flex flex-col justify-center items-center">
-                        <input type="text" id="username" name="username" placeholder="Username" class="border-2 border-black rounded-lg p-2 mt-4">
-                        <input type="password" id="password" name="password" placeholder="Password" class="border-2 border-black rounded-lg p-2 mt-4">
-                        <input type="password" id="cpassword" name="cpassword" placeholder="Confirm Password" class="border-2 border-black rounded-lg p-2 mt-4">
+                        <input type="text" id="username" name="username" placeholder="Username" class="border-2 border-black rounded-lg p-2 mt-4" required>
+                        <input type="password" id="password" name="password" placeholder="Password" class="border-2 border-black rounded-lg p-2 mt-4" required>
+                        <input type="password" id="cpassword" name="cpassword" placeholder="Confirm Password" class="border-2 border-black rounded-lg p-2 mt-4" required>
                         <button class="bg-red-500 text-white px-4 py-2 rounded-lg mt-2">SignUp</button>
                     </div>
                     
@@ -105,7 +113,7 @@
                 if($showError){ 
                 ?>
                     <div class="text-red-500 font-semibold text-xl text-center">
-                        Passwords don't match try again!!
+                       <?php echo $showError; ?>
                     </div>
                 <?php
                 } 

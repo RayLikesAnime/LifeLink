@@ -52,8 +52,12 @@ if(isset($_POST['logout'])){
                 <div class="text-black font-semibold text-2xl p-2">
                     How can we help you today?
                 </div>
-                <button class="p-3    border border-red text-s rounded-3xl"><a href="./transplants.php">Transplants</a><button> 
-                <button class="p-3   border border-red rounded-3xl"><a href="./organsuserpage.php">Show all organs</a><button> 
+                <!-- put these buttons in flexbox -->
+                <div class="flex">
+                    <button class="p-3 ml-12 mr-7 border border-red text-s rounded-3xl"><a href="./transplants.php">Transplants</a><button> 
+                    <button class="p-3   border border-red rounded-3xl"><a href="./organsuserpage.php">Show all organs</a><button> 
+                </div>
+                
             </div>
             <div class="w-1/2 flex justify-center items-center">
                 <img src="./images/welcome.jpg" alt="welcome" class="h-64" >
