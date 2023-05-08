@@ -58,7 +58,7 @@ if(isset($_POST['logout'])){
                 <?php
                 if(isset($_POST['submit'])){
                     $search=$_POST['search'];
-                    $sql="Select * from `donor` NATURAL JOIN `organs` where organ='$search';";
+                    $sql="Select * from `donor` NATURAL JOIN `organs` where organ='$search' AND status='YES';";
                     $result=mysqli_query($conn, $sql);
                     if($result){
                         if(mysqli_num_rows($result) > 0){
@@ -79,9 +79,9 @@ if(isset($_POST['logout'])){
                             </tr>
                             </thead>
                             ';
-                            $row=mysqli_fetch_assoc($result);
-                            echo'<tbody>
-                            <tr>
+                            echo'<tbody>';
+                            while($row = mysqli_fetch_array($result)){
+                            echo'<tr>
                             <td class="border px-4 py-2">'.$row['Donor_ID'].'</td>
                             <td class="border px-4 py-2">'.$row['first_name'].'</td>
                             <td class="border px-4 py-2">'.$row['last_name'].'</td>
@@ -93,8 +93,10 @@ if(isset($_POST['logout'])){
                             <td class="border px-4 py-2">'.$row['address2'].'</td>
                             <td class="border px-4 py-2">'.$row['address3'].'</td>
                             <td class="border px-4 py-2">'.$row['phone'].'</td>
-                            </tr>
-                            </tbody>';
+                            </tr>';
+                            }
+                             echo '</tbody>';
+                            echo "</table>";
                         }
                         else{
                             echo'
