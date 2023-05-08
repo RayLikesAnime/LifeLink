@@ -23,9 +23,11 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 
 $sql="DELETE FROM `doctor` WHERE `Doctor_ID` = '$Doctor_ID';";
 if (mysqli_query($conn, $sql)) {
-    echo "Record Deleted successfully";
-    header("Location:./Userpage.php");
+    $message = "Data Deleted Successfully";
+echo "<script type='text/javascript'>alert('$message');</script>";
   } else {
+    $message = "Error Deleting ";
+echo "<script type='text/javascript'>alert('$message');</script>";
     echo "Error inserting record: " . mysqli_error($conn);
   }
 }
@@ -51,7 +53,7 @@ if (mysqli_query($conn, $sql)) {
             <ul class="flex justify-evenly mr-8">
                 <li class="text-lg font-semibold px-4"><a href="./Userpage.php">Home</a></li>
                 <li class="text-lg font-semibold px-4">
-                    <form action="./Userpage.php" method="post">
+                    <form action="./Login.php" method="post">
                          <input type="submit" name="logout" value="Logout">
                     </form>
                 </li>

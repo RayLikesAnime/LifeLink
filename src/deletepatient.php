@@ -23,9 +23,11 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 
 $sql="DELETE FROM `patient` WHERE `Patient_ID` = '$Patient_ID';";
 if (mysqli_query($conn, $sql)) {
-    echo "Record Deleted successfully";
-    header("Location:./Userpage.php");
+    $message = "Data Deleted Successfully";
+echo "<script type='text/javascript'>alert('$message');</script>";
   } else {
+    $message = "Error Deleting Data";
+echo "<script type='text/javascript'>alert('$message');</script>";
     echo "Error inserting record: " . mysqli_error($conn);
   }
 }

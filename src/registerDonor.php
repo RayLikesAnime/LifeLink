@@ -30,7 +30,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     $address3=$_POST["address3"];
     $phone=$_POST["phone"];
     $organ=$_POST["organ"];
-    $status=$_POST["status"];
     $firstname=$_POST["firstname"];
     $lastname=$_POST["lastname"];
     $relation=$_POST["relation"];
@@ -42,7 +41,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     $sql1="INSERT INTO `donor` (`first_name`, `last_name`, `age`,`Blood_group`,`medical_history`, `doctor`, `address`,`address2`, `address3`, `phone`) VALUES ('$first_name', '$last_name','$age',  '$Blood_group', '$medical_history','$doctor', '$address','$address2', '$address3','$phone');";
     $result1=mysqli_query($conn, $sql1);
     $sql2 = "INSERT INTO `organs` (`Donor_id`, `organ`, `status`)
-         SELECT `Donor_ID`, '$organ' , '$status'
+         SELECT `Donor_ID`, '$organ', 'YES'
          FROM `donor`
          WHERE `first_name` = '$first_name' AND `last_name`='$last_name' AND `age` = '$age' AND `medical_history` = '$medical_history' AND `doctor` = '$doctor' AND `address` = '$address' AND `address2` = '$address2' AND `address3` = '$address3' AND`phone` = '$phone' AND `Blood_group`='$Blood_group'";
     $result2=mysqli_query($conn, $sql2);
@@ -163,12 +162,7 @@ echo "<script type='text/javascript'>alert('$message');</script>";
         Organ Available
       </label>
       <input class=" border rounded w-full py-3 px-4 text-gray-700 mb-3" id="organ" name="organ" type="text">
-      <div class="mb-4">
-      <label class="block text-gray-700 text-sm font-bold mb-2" for="patientid">
-        Status
-      </label>
-      <input class=" border rounded w-full py-3 px-4 " id="patientid" type="text" name="status">
-    </div>
+    
     <h1 class="text-center decoration-solid text-black text-4xl font-bold mt-7">Relative Details</h1>
     <div class="flex flex-wrap -mx-3 mb-6 mt-8">
         <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
