@@ -68,8 +68,8 @@
                 <li class="text-lg font-semibold px-4"><a href="./Userpage.php">Home</a></li>
 
                 <li class="text-lg font-semibold px-4">
-                   <form action="./Userpage.php" method="post">
-                         <input type="submit" name="logout" value="logout">
+                   <form action="./Login.php" method="post">
+                         <input type="submit" name="logout" value="Logout">
                     </form> 
                 </li>
             </ul>

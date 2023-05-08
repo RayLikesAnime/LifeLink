@@ -38,8 +38,8 @@ if(isset($_POST['logout'])){
             <ul class="flex justify-evenly mr-8">
                 <li class="text-lg font-semibold px-4"><a href="./Userpage.php">Home</a></li>
                 <li class="text-lg font-semibold px-4">
-                    <form action="./Userpage.php" method="post">
-                         <input type="submit" name="logout" value="logout">
+                    <form action="./Login.php" method="post">
+                         <input type="submit" name="logout" value="Logout">
                     </form>
                 </li>
             </ul>
@@ -65,28 +65,28 @@ if(isset($_POST['logout'])){
                <img src="./images/patient.png" alt="patient" class="mx-auto pt-4">
                <h3 class="text-xl font-semibold text-center pt-4">Patients</h3>
                <div class="flex justify-center mt-6">
-                    <button class="p-3 border border-white rounded-3xl"><a href="./patient.php">Got to patients</a><button> 
+                    <button class="p-3 border border-white rounded-3xl"><a href="./patient.php">Go to patients</a><button> 
                </div>
             </div>
             <div class="w-64 h-64 bg-black text-white rounded-3xl p-4">
               <img src="./images/donor.png" alt="donor" class="mx-auto pt-4">
                <h3 class="text-xl font-semibold text-center pt-4">Donors</h3>
                <div class="flex justify-center mt-6">
-                    <button class="p-3 border border-white rounded-3xl"><a href="./Donor.php">Got to Donors</a><button> 
+                    <button class="p-3 border border-white rounded-3xl"><a href="./Donor.php">Go to Donors</a><button> 
                </div>
             </div>
             <div class="w-64 h-64 bg-black text-white rounded-3xl p-4">
                 <img src="./images/doctor.png" alt="doctor" class="mx-auto pt-4">
                <h3 class="text-xl font-semibold text-center pt-4">Doctors</h3>
                <div class="flex justify-center mt-6">
-                    <button class="p-3 border border-white rounded-3xl"><a href="./Doctor.php">Got to Doctors</a><button> 
+                    <button class="p-3 border border-white rounded-3xl"><a href="./Doctor.php">Go to Doctors</a><button> 
                </div>
             </div>
             <div class="w-64 h-64 bg-black text-white rounded-3xl p-4">
                 <img src="./images/hospital.png" alt="hospital" class="mx-auto pt-4">
                <h3 class="text-xl font-semibold text-center pt-4">Hospitals</h3>
                <div class="flex justify-center mt-6">
-                    <button class="p-3 border border-white rounded-3xl"><a href="./Hospital.php">Got to Hospitals</a><button> 
+                    <button class="p-3 border border-white rounded-3xl"><a href="./Hospital.php">Go to Hospitals</a><button> 
                </div>
             </div>
             <div class="w-64 h-64 bg-black text-white rounded-3xl p-4">

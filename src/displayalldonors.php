@@ -42,7 +42,7 @@ if(isset($_POST['logout'])){
             <ul class="flex justify-evenly mr-8">
                 <li class="text-lg font-semibold px-4"><a href="./Userpage.php">Home</a></li>
                 <li class="text-lg font-semibold px-4">
-                    <form action="./Userpage.php" method="post">
+                    <form action="./Login.php" method="post">
                         <input type="submit" name="logout" value="Logout">
                     </form>
                 </li>
@@ -57,7 +57,8 @@ if(isset($_POST['logout'])){
 			include "dbconnect.php";
 
 			// Execute the SELECT query
-			$result = mysqli_query($conn, "SELECT * FROM donor");
+			$result = mysqli_query($conn, "SELECT d.Donor_ID, d.first_name, d.last_name, d.age, d.Blood_group, d.medical_history, d.doctor, d.address, d.phone, n.First_name, n.last_name, n.Relation, n.Street, n.City, n.state FROM donor d, next_of_kin n WHERE d.Donor_ID=n.Donor_ID");
+
 
 			// Create a table with Tailwind CSS classes
 			echo '<table class="table-auto w-full border-collapse border border-gray-500 m-8 shadow-lg">';
@@ -72,6 +73,13 @@ if(isset($_POST['logout'])){
 			<th class="px-4 py-2 bg-gray-200 border border-gray-500">Doctor</th>
 			<th class="px-4 py-2 bg-gray-200 border border-gray-500">City</th>
 			<th class="px-4 py-2 bg-gray-200 border border-gray-500">Phone Number</th>
+			<th class="px-4 py-2 bg-gray-200 border border-gray-500">Relative First Name</th>
+			<th class="px-4 py-2 bg-gray-200 border border-gray-500">Relative Last Name</th>
+			<th class="px-4 py-2 bg-gray-200 border border-gray-500">Relation</th>
+			<th class="px-4 py-2 bg-gray-200 border border-gray-500">Street</th>
+			<th class="px-4 py-2 bg-gray-200 border border-gray-500">City</th>
+			<th class="px-4 py-2 bg-gray-200 border border-gray-500">State</th>
+
 
 
 			</tr>
@@ -90,6 +98,13 @@ if(isset($_POST['logout'])){
 				echo '<td class="px-4 py-2">'.$row['doctor'].'</td>';
 				echo '<td class="px-4 py-2">'.$row['address'].'</td>';
 				echo '<td class="px-4 py-2">'.$row['phone'].'</td>';
+				echo '<td class="px-4 py-2">'.$row['First_name'].'</td>';
+				echo '<td class="px-4 py-2">'.$row['last_name'].'</td>';
+				echo '<td class="px-4 py-2">'.$row['Relation'].'</td>';
+				echo '<td class="px-4 py-2">'.$row['Street'].'</td>';
+				echo '<td class="px-4 py-2">'.$row['City'].'</td>';
+				echo '<td class="px-4 py-2">'.$row['state'].'</td>';
+
 
 				echo '</tr>';
 			}

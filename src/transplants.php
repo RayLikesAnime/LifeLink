@@ -27,9 +27,11 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 
     $sql="INSERT INTO `transplants` (`patient_ID`, `organ_ID`, `date`,`status`) VALUES ('$patient_ID', '$organ_ID','$date', '$status');";
     if (mysqli_query($conn, $sql)) {
-        echo "Record inserted successfully";
-        header("Location:./Userpage.php");
+        $message = "Data Inserted Successfully";
+        echo "<script type='text/javascript'>alert('$message');</script>";
       } else {
+        $message = "Error Inserting Data";
+echo "<script type='text/javascript'>alert('$message');</script>";
         echo "Error inserting record: " . mysqli_error($conn);
       }
 }
@@ -55,7 +57,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             <ul class="flex justify-evenly mr-8">
                 <li class="text-lg font-semibold px-4"><a href="./Userpage.php">Home</a></li>
                 <li class="text-lg font-semibold px-4">
-                    <form action="./Userpage.php" method="post">
+                    <form action="./Login.php" method="post">
                          <input type="submit" name="logout" value="Logout">
                     </form>
                 </li>
