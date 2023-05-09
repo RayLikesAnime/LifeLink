@@ -25,7 +25,7 @@ if(isset($_POST['logout'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Doctor</title>
+    <title>Doctor Search Option</title>
 </head>
 <body>
 <header>
@@ -33,7 +33,7 @@ if(isset($_POST['logout'])){
             <div class="ml-4 flex items-center">
                 <img src="./images/logo.png" alt="">
                 <h1 class="text-3xl ml-2 font-semibold">LifeLink</h1>
-                <a href="Userpage.php"><button type="button" class=" ml-5 text-white bg-red-500 hover:bg-red-700 focus:ring-4 rounded-lg text-sm px-4 py-2 text-center inline-flex items-center">Back
+                <a href="Doctor.php"><button type="button" class=" ml-5 text-white bg-red-500 hover:bg-red-700 focus:ring-4 rounded-lg text-sm px-4 py-2 text-center inline-flex items-center">Back
 </button></a>
             </div>
             <ul class="flex justify-evenly mr-8">
@@ -47,28 +47,22 @@ if(isset($_POST['logout'])){
         </nav>
     </header>
     <div class="flex justify-center">
-    <a href="./registerDoctor.php">
+    <a href="./searchDocCity.php">
 <button class="bg-red-500  text-white mt-10 py-4 px-80 hover:bg-red-700  rounded border-red-500 ">
-  Register Doctor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  Search by City&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </button></a>
 </div>
 <div class="flex justify-center" >
-<a href="./searchDoctorOption.php">
+<a href="./searchDocDepartment.php">
 <button class="bg-red-500 text-white py-4 px-80 mt-1 hover:bg-red-700 rounded border-red-500">
-  Search Doctor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  Search by Department 
 </button>
 </a>
 </div>
 <div class="flex justify-center">
-    <a href="./deletedoctor.php">
+    <a href="./searchDocHospital.php">
 <button class="bg-red-500 text-white mt-1 py-4 px-80 hover:bg-red-700 rounded border-red-500 ">
-  Delete Doctor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</button></a>
-</div>
-<div class="flex justify-center">
-    <a href="./displayalldoctors.php">
-<button class="bg-red-500 text-white mt-1 py-4 px-80 hover:bg-red-700 rounded border-red-500 ">
-  Display All Doctors
+  Search by Hospital &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </button></a>
 </div>
 <div class="w-screen mt-10 flex justify-center items-center">

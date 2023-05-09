@@ -23,31 +23,29 @@ if(isset($_POST['logout'])){
 include "dbconnect.php";
 
 // Fetch all available organs from the database
-$department_query = mysqli_query($conn, "SELECT DISTINCT department_name FROM doctor");
-$departments = mysqli_fetch_all($department_query, MYSQLI_ASSOC);
 $city_query = mysqli_query($conn, "SELECT DISTINCT City FROM doctor NATURAL JOIN hospital");
 $cities = mysqli_fetch_all($city_query, MYSQLI_ASSOC);
-$hospital_query = mysqli_query($conn, "SELECT DISTINCT Hospital_name FROM doctor NATURAL JOIN hospital");
-$hospitals = mysqli_fetch_all($hospital_query, MYSQLI_ASSOC);
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Doctor</title>
+    <title>Doctor Search by city</title>
 </head>
+
 <body>
     <header>
         <nav class="bg-black text-white p-2 flex justify-between items-center sticky">
             <div class="ml-4 flex items-center">
                 <img src="./images/logo.png" alt="">
                 <h1 class="text-3xl ml-2 font-semibold">LifeLink</h1>
-                <a href="Doctor.php"><button type="button"
+                <a href="searchDoctorOption.php"><button type="button"
                         class=" ml-5 text-white bg-red-500 hover:bg-red-700 focus:ring-4 rounded-lg text-sm px-4 py-2 text-center inline-flex items-center">Back
                     </button></a>
             </div>
@@ -62,29 +60,14 @@ $hospitals = mysqli_fetch_all($hospital_query, MYSQLI_ASSOC);
         </nav>
     </header>
     <h1 class="text-3xl font-bold mt-6 flex justify-center">Search Doctor</h1>
-
     <div class="mt-8 flex justify-center">
-        <form action="searchDoctor.php" method="get">
-            <label for="department" class="mr-2">Select Department</label>
-            <select name="department" id="department" class="p-2 rounded-md border-gray-500 border-2">
-                <option value="">All Departments</option>
-                <?php foreach ($departments as $department): ?>
-                    <option value="<?php echo $department['department_name']; ?>"><?php echo $department['department_name']; ?></option>
-                <?php endforeach; ?>
-            </select>
+        <form action="searchDocCity.php" method="get">
             <label for="city" class="mr-2">Select City</label>
             <select name="city" id="city" class="p-2 rounded-md border-gray-500 border-2">
                 <option value="">All Cities</option>
                 <?php 
                 foreach ($cities as $city): ?>
-                    <option value="<?php echo $city['City']; ?>"><?php echo $city['City']; ?></option>
-                <?php endforeach; ?>
-            </select>
-            <label for="hospital" class="mr-2">Select Hospital</label>
-            <select name="hospital" id="hospital" class="p-2 rounded-md border-gray-500 border-2">
-                <option value="">All Hospitals</option>
-                <?php foreach ($hospitals as $hospital): ?>
-                    <option value="<?php echo $hospital['Hospital_name']; ?>"><?php echo $hospital['Hospital_name']; ?></option>
+                <option value="<?php echo $city['City']; ?>"><?php echo $city['City']; ?></option>
                 <?php endforeach; ?>
             </select>
             <button type="submit" class="ml-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
@@ -96,11 +79,9 @@ $hospitals = mysqli_fetch_all($hospital_query, MYSQLI_ASSOC);
     <div class="mr-16">
         <?php
         // Check if a specific organ was selected
-        if ((isset($_GET['department']) && !empty($_GET['department'])) && (isset($_GET['city']) && !empty($_GET['city'])) && (isset($_GET['hospital']) && !empty($_GET['hospital']))) {
-            $department = mysqli_real_escape_string($conn, $_GET['department']);
+        if ((isset($_GET['city']) && !empty($_GET['city']))) {
             $city = mysqli_real_escape_string($conn, $_GET['city']);
-            $hospital = mysqli_real_escape_string($conn, $_GET['hospital']);
-            $query = "SELECT * FROM `doctor` NATURAL JOIN `hospital`  WHERE department_name = '$department' && City = '$city' && Hospital_name = '$hospital' ;";
+            $query = "SELECT * FROM `doctor` NATURAL JOIN `hospital`  WHERE City = '$city' ";
 			$result = mysqli_query($conn, $query);
 			$num_rows = mysqli_num_rows($result);
 			if ($num_rows > 0) {
@@ -187,7 +168,7 @@ $hospitals = mysqli_fetch_all($hospital_query, MYSQLI_ASSOC);
 	
 				echo "</table>";
 			}
-			// mysqli_close($conn);
+			mysqli_close($conn);
 		}
 		?>
     </div>
