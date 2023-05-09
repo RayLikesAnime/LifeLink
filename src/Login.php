@@ -63,8 +63,8 @@
                 <h1 class="font-semibold text-3xl">Login into the system</h1>
                 <form action="./Login.php" method="post">
                     <div class="flex flex-col justify-center items-center">
-                        <input type="text" placeholder="Username" id="username" name="username" class="border-2 border-black rounded-lg p-2 mt-4">
-                        <input type="password" placeholder="Password" id="password" name="password" class="border-2 border-black rounded-lg p-2 mt-4">
+                        <input type="text" placeholder="Username" id="username" name="username" class="border-2 border-black rounded-lg p-2 mt-4" required>
+                        <input type="password" placeholder="Password" id="password" name="password" class="border-2 border-black rounded-lg p-2 mt-4" required>
                         <input type="submit" class="bg-red-500 text-white px-4 py-2 rounded-lg mt-2" name="login" value="submit"></input>
                         <?php  
                           if($username_error){

@@ -74,7 +74,7 @@ echo "<script type='text/javascript'>alert('$message');</script>";
         <label class="text-gray-700 text-l font-bold mb-2" for="grid-first-name">
             First Name
         </label>
-        <input class="block w-full text-gray-700 border rounded py-3 px-4 mb-3" id="grid-first-name" name="firstname" type="text">
+        <input class="block w-full text-gray-700 border rounded py-3 px-4 mb-3" id="grid-first-name" name="firstname" type="text" required>
         </div>
         <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
         <label class="text-gray-700 text-l font-bold mb-2" for="grid-last-name">
@@ -86,7 +86,7 @@ echo "<script type='text/javascript'>alert('$message');</script>";
         <label class="text-gray-700 text-l font-bold mb-2" for="grid-first-name">
             Department Name
         </label>
-        <input class="block w-full text-gray-700 border rounded py-3 px-4 mb-3 " id="grid-first-name" name="departmentname" type="text">
+        <input class="block w-full text-gray-700 border rounded py-3 px-4 mb-3 " id="grid-first-name" name="departmentname" type="text" required>
         </div>
         <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0"> 
         <label class="text-gray-700 text-l font-bold mb-2" for="grid-first-name">
@@ -94,13 +94,13 @@ echo "<script type='text/javascript'>alert('$message');</script>";
         </label>
         <a href="displayallhospitals.php" target ="_blank"><div class="text-blue-700 underline hover:underline-offset-4 ml-48"> view id</div></a>
         
-        <input class="alock w-full bext-gray-700 border rounded py-3 px-4 mb-3" id="grid-first-name" name="hospitalid" type="text">
+        <input class="alock w-full bext-gray-700 border rounded py-3 px-4 mb-3" id="grid-first-name" name="hospitalid" type="text" required>
         </div>
         <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
         <label class="text-gray-700 text-l font-bold mb-2" for="grid-city">
             Phone Number
         </label>
-        <input class="block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 " id="grid-city" name="phone" type="text">
+        <input class="block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 " id="grid-city" name="phone" required pattern="[0-9]{10}" type="tele" required>
         </div>
     </div>
     <button class="bg-red-500 text-white px-4 py-2 rounded-lg mt-2 mb-6 ml-48 " type="submit">Register</button>

@@ -97,7 +97,7 @@ echo "<script type='text/javascript'>alert('$message');</script>";
         <label class="text-gray-700 text-l font-bold mb-2" for="grid-first-name">
             First Name
         </label>
-        <input class="block w-full text-gray-700 border rounded py-3 px-4 mb-3" id="grid-first-name" name="first_name" type="text">
+        <input class="block w-full text-gray-700 border rounded py-3 px-4 mb-3" id="grid-first-name" name="first_name" type="text" required>
         </div>
         <div class="w-full md:w-1/2 px-3">
         <label class="text-gray-700 text-l font-bold mb-2" for="grid-last-name">
@@ -109,27 +109,27 @@ echo "<script type='text/javascript'>alert('$message');</script>";
         <label class="text-gray-700 text-L font-bold mb-2" for="grid-zip">
             Age
         </label>
-        <input class=" block w-full text-gray-700 border rounded py-3 px-4" id="grid-zip" name="age" ">
+        <input class=" block w-full text-gray-700 border rounded py-3 px-4" id="grid-zip" type="number" name="age" required>
         </div>
         <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
         <label class=" text-gray-700 text-l font-bold mb-2" for="grid-state">
             Doctor ID
         </label>
         <a href="searchDoctor.php" target ="_blank"><div class="text-blue-700 underline hover:underline-offset-4 ml-24"> view id</div></a>
-        <input class=" block w-full  text-gray-700 border  rounded py-3 px-4" id="grid-city" name="doctor" type="text">
+        <input class=" block w-full  text-gray-700 border  rounded py-3 px-4" id="grid-city" name="doctor" type="text" required>
         </div>
         
         <div class="w-full px-3 mt-3">
         <label class="text-gray-700 text-l font-bold mb-2" for="grid-password">
             Medical History
         </label>
-        <input class="w-full text-gray-700 border  rounded py-3 px-4 mb-3 " id="grid-password" name="medical_history">
+        <input class="w-full text-gray-700 border  rounded py-3 px-4 mb-3 " id="grid-password" name="medical_history" required>
         </div>
         <div class="w-full px-3">
         <label class="text-gray-700 text-l font-bold mb-2" for="grid-password">
             Address
         </label>
-        <input class="w-full text-gray-700 border rounded py-3 px-4 mb-3" id="grid-password" name="address">
+        <input class="w-full text-gray-700 border rounded py-3 px-4 mb-3" id="grid-password" name="address" required>
         </div>
         <div class="w-full px-3">
         <label class="text-gray-700 text-l font-bold mb-2">
@@ -147,13 +147,13 @@ echo "<script type='text/javascript'>alert('$message');</script>";
         <label class="text-gray-700 text-l font-bold mb-2" for="grid-city">
             Phone
         </label>
-        <input class=" w-full  text-gray-700 border  rounded py-3 px-4" id="grid-city" name="phone">
+        <input class=" w-full  text-gray-700 border  rounded py-3 px-4" id="grid-city" type="tele" required pattern="[0-9]{10}" name="phone" required>
         </div>
         <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
         <label class=" text-gray-700 text-l font-bold mb-2" for="grid-state">
             Blood Group
         </label>
-        <input class="w-full text-gray-700 border  rounded py-3 px-4 " id="grid-city" name="Blood_group" type="text">        
+        <input class="w-full text-gray-700 border  rounded py-3 px-4 " id="grid-city" name="Blood_group" type="text" required>        
         </div>
         
     </div>

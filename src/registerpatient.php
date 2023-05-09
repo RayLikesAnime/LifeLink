@@ -139,7 +139,7 @@ echo "<script type='text/javascript'>alert('$message');</script>";
         <label class="text-gray-700 text-l font-bold mb-2" for="grid-phone">
             Phone
         </label>
-        <input class=" w-full  text-gray-700 border  rounded py-3 px-4" id="grid-phone" name="phone">
+        <input class=" w-full  text-gray-700 border  rounded py-3 px-4" id="grid-phone" type="tel" required pattern="[0-9]{10}" name="phone" required>
         </div>
         <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
         <label class=" text-gray-700 text-l font-bold mb-2" for="grid-blood-group">
