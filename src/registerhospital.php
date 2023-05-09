@@ -72,19 +72,19 @@ echo "<script type='text/javascript'>alert('$message');</script>";
         <label class="text-gray-700 text-l font-bold mb-2">
             Hospital Name
         </label>
-        <input class=" block w-full text-gray-700 border rounded py-3 px-4 mb-3" id="grid-password" name="Hospital_name">
+        <input class=" block w-full text-gray-700 border rounded py-3 px-4 mb-3" id="grid-password" name="Hospital_name" required>
         </div>
         <div class="w-full px-3">
         <label class="text-gray-700 text-l font-bold mb-2">
             City
         </label>
-        <input class="block w-full text-gray-700 border  rounded py-3 px-4 mb-3" name="City">
+        <input class="block w-full text-gray-700 border  rounded py-3 px-4 mb-3" name="City" required>
         </div>
         <div class="w-full px-3">
         <label class="text-gray-700 text-l font-bold mb-2">
             State
         </label>
-        <input class=" block w-full  text-gray-700 border  rounded py-3 px-4 mb-3 " name="State" >
+        <input class=" block w-full  text-gray-700 border  rounded py-3 px-4 mb-3 " name="State" required>
         </div>
     </div>
     <div class="flex justify-center">
