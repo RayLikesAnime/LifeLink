@@ -6,21 +6,26 @@
     // }
     $password_error=false;
     $username_error=false;
+    $token_error=false;
     if(isset($_POST['login'])){
         include "dbconnect.php";
         $username=$_POST['username'];
         $password=$_POST['password'];
+        $vt=$_POST['vt'];
         $sql="SELECT * FROM `login` WHERE `username`='$username'";
         $res=mysqli_query($conn,$sql);
         $num=mysqli_num_rows($res);
         if($num==1){
             $row=mysqli_fetch_assoc($res);
-            if($password==$row['password']){
+            if($password==$row['password'] && $vt==$row['Token']){
                 $_SESSION['username']=$row['username'];
                 header("Location:./Userpage.php");
             }
-            else{
+            else if($password!=$row['password']){
                 $password_error=true;
+            }
+            else if($vt!=$row['Token']){
+                $token_error=true;
             }
         }
         else{
@@ -65,6 +70,7 @@
                     <div class="flex flex-col justify-center items-center">
                         <input type="text" placeholder="Username" id="username" name="username" class="border-2 border-black rounded-lg p-2 mt-4" required>
                         <input type="password" placeholder="Password" id="password" name="password" class="border-2 border-black rounded-lg p-2 mt-4" required>
+                        <input type="password" placeholder="Authentication Token" id="password" name="vt" class="border-2 border-black rounded-lg p-2 mt-4" required>
                         <input type="submit" class="bg-red-500 text-white px-4 py-2 rounded-lg mt-2" name="login" value="submit"></input>
                         <?php  
                           if($username_error){
@@ -76,6 +82,11 @@
                            ?>
                             <p class="text-red-500 text-2xl font-semibold">Password is incorrect</p>
                             <?php
+                            }
+                            if($token_error){
+                        ?>
+                        <p class="text-red-500 text-2xl font-semibold">Token is incorrect</p>
+                        <?php 
                             }
                         ?>
                     </div>

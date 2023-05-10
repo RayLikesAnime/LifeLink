@@ -120,18 +120,19 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
                 <h1 class="font-semibold text-3xl">Enter the details of the new admin</h1>
                 <form action="./Signup.php" method="post">
                     <div class="flex flex-col justify-center items-center">
-                        <input type="text" id="username" name="username" placeholder="Username" class="border-2 border-black rounded-lg p-2 mt-4" required>
-                        <input type="text" id="email" name="email" placeholder="Email ID" class="border-2 border-black rounded-lg p-2 mt-4" required>
-                        <input type="password" id="password" name="password" placeholder="Password" class="border-2 border-black rounded-lg p-2 mt-4" required>
-                        <input type="password" id="cpassword" name="cpassword" placeholder="Confirm Password" class="border-2 border-black rounded-lg p-2 mt-4" required>
+                        <input type="text" id="username" name="verificationtoken" placeholder="Username" class="border-2 border-black rounded-lg p-2 mt-4" required>
                         <button class="bg-red-500 text-white px-4 py-2 rounded-lg mt-2">SignUp</button>
                     </div>
                     
                 </form>
                 <?php
                 if($showAlert) {
-                    $message = "Token Sent To Mail";
-                    echo "<script type='text/javascript'>alert('$message');</script>";
+                ?>
+                    <div class="text-green-500 text-xl font-semibold text-center" >
+                        Your Account has been successfully created!!<br>
+                        Go to Login page 
+                    </div> 
+                <?php  
                 }
                 if($showError){ 
                 ?>
