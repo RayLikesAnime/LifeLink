@@ -83,6 +83,8 @@ $organs = mysqli_fetch_all($organs_query, MYSQLI_ASSOC);
 				echo '<thead>
 				<tr>
 				<th class="px-4 py-2 bg-gray-200 border border-gray-500">Donor ID</th>
+				<th class="px-4 py-2 bg-gray-200 border border-gray-500">Organ ID</th>
+
 				<th class="px-4 py-2 bg-gray-200 border border-gray-500">Organ</th>
 				<th class="px-4 py-2 bg-gray-200 border border-gray-500">First Name</th>
 				<th class="px-4 py-2 bg-gray-200 border border-gray-500">Last Name</th>
@@ -100,6 +102,7 @@ $organs = mysqli_fetch_all($organs_query, MYSQLI_ASSOC);
 				while($row = mysqli_fetch_array($result)) {
 					echo '<tr class="border border-gray-500">';
 					echo '<td class="px-4 py-2">'.$row['Donor_id'].'</td>';
+					echo '<td class="px-4 py-2">'.$row['Organ_id'].'</td>';
 					echo '<td class="px-4 py-2">'.$row['organ'].'</td>';
 					echo '<td class="px-4 py-2">'.$row['first_name'].'</td>';
 					echo '<td class="px-4 py-2">'.$row['last_name'].'</td>';

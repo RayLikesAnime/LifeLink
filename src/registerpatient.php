@@ -102,7 +102,7 @@ echo "<script type='text/javascript'>alert('$message');</script>";
         <label class="text-gray-700 text-l font-bold mb-2" for="doctor">
             Doctor ID
         </label>
-        <a href="searchDoctor.php" target ="_blank"><div class="text-blue-700 underline hover:underline-offset-4 ml-40"> view doctor</div></a>
+        <a href="searchDoctorOption.php" target ="_blank"><div class="text-blue-700 underline hover:underline-offset-4 ml-40"> view doctor</div></a>
         <input class=" w-full text-gray-700 border rounded py-3 px-4 mb-3 " id="doctor" name="doctor" type="text" required>
         </div>
         <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
