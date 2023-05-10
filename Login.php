@@ -46,8 +46,8 @@
                 <h1 class="text-3xl ml-2 font-semibold">LifeLink</h1>
             </div>
             <ul class="flex justify-evenly mr-8">
-                <li class="text-lg font-semibold px-4"><a href="./Home.php">Home</a></li>
-                <li class="text-lg font-semibold px-4"><a href="./Signup.php">Signup</a></li>
+                <li class="text-lg font-semibold px-4"><a href="./index.html">Home</a></li>
+                <!-- <li class="text-lg font-semibold px-4"><a href="./Signup.php">Signup</a></li> -->
                 <li class="text-lg font-semibold px-4"><a href="#">Login</a></li>
             </ul>
         </nav>
