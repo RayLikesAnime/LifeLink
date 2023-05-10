@@ -115,7 +115,7 @@ echo "<script type='text/javascript'>alert('$message');</script>";
         <label class=" text-gray-700 text-l font-bold mb-2" for="grid-state">
             Doctor ID
         </label>
-        <a href="searchDoctor.php" target ="_blank"><div class="text-blue-700 underline hover:underline-offset-4 ml-24"> view id</div></a>
+        <a href="searchDoctorOption.php" target ="_blank"><div class="text-blue-700 underline hover:underline-offset-4 ml-24"> view id</div></a>
         <input class=" block w-full  text-gray-700 border  rounded py-3 px-4" id="grid-city" name="doctor" type="text" required>
         </div>
         
