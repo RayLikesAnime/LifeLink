@@ -90,7 +90,7 @@ if(isset($_POST['logout'])){
                 <img src="./images/hospital.png" alt="hospital" class="mx-auto pt-4">
                <h3 class="text-xl font-semibold text-center pt-4">Hospitals</h3>
                <div class="flex justify-center mt-6">
-                    <button class="p-3 border border-white rounded-3xl"><a href="./Hospital.php">Go to Hospitals</a><button> 
+                    <button class="p-3 border border-white rounded-3xl"><a href="./hospital.php">Go to Hospitals</a><button> 
                </div>
             </div>
             <div class="w-64 h-64 bg-black text-white rounded-3xl p-4">
