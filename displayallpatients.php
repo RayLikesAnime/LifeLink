@@ -79,9 +79,17 @@ if(isset($_POST['logout'])){
 			</thead>';
 
 			// Fetch rows from the result set and display data in table with Tailwind CSS classes
+			// retrieve the list of patient IDs from the transplants table
+			$transplant_ids = array();
+			$transplants_query = "SELECT patient_id FROM transplants";
+			$transplants_result = mysqli_query($conn, $transplants_query);
+			while ($transplant_row = mysqli_fetch_array($transplants_result)) {
+				$transplant_ids[] = $transplant_row['patient_id'];
+			}
 			echo '<tbody class="text-center">';
 			while($row = mysqli_fetch_array($result)) {
-				echo '<tr class="border border-gray-500">';
+				$row_class = in_array($row['Patient_ID'], $transplant_ids) ? 'bg-green-100' : 'bg-red-200';
+				echo '<tr class="border border-gray-500 '.$row_class.'">';
 				echo '<td class="px-4 py-2">'.$row['Patient_ID'].'</td>';
 				echo '<td class="px-4 py-2">'.$row['first_name'].'</td>';
 				echo '<td class="px-4 py-2">'.$row['last_name'].'</td>';
