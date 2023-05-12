@@ -38,6 +38,7 @@ echo "<script type='text/javascript'>alert('$message');</script>";
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -45,20 +46,22 @@ echo "<script type='text/javascript'>alert('$message');</script>";
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Transplants</title>
 </head>
+
 <body>
-<header>
+    <header>
         <nav class="bg-black text-white p-2 flex justify-between items-center sticky">
             <div class="ml-4 flex items-center">
                 <img src="./images/logo.png" alt="">
                 <h1 class="text-3xl ml-2 font-semibold">LifeLink</h1>
-                <a href="Userpage.php"><button type="button" class=" ml-5 text-white bg-red-500 hover:bg-red-700 focus:ring-4 rounded-lg text-sm px-4 py-2 text-center inline-flex items-center">Back
-</button></a>
+                <a href="Userpage.php"><button type="button"
+                        class=" ml-5 text-white bg-red-500 hover:bg-red-700 focus:ring-4 rounded-lg text-sm px-4 py-2 text-center inline-flex items-center">Back
+                    </button></a>
             </div>
             <ul class="flex justify-evenly mr-8">
                 <li class="text-lg font-semibold px-4"><a href="./Userpage.php">Home</a></li>
                 <li class="text-lg font-semibold px-4">
                     <form action="./Login.php" method="post">
-                         <input type="submit" name="logout" value="Logout">
+                        <input type="submit" name="logout" value="Logout">
                     </form>
                 </li>
             </ul>
@@ -66,40 +69,70 @@ echo "<script type='text/javascript'>alert('$message');</script>";
     </header>
     <h1 class="text-4xl flex justify-center mt-7 font-bold">Transplants</h1>
     <div class="flex justify-center mt-9">
-    <form class="w-full max-w-lg" action="./transplants.php"  bg-gray-500 shadow-md rounded" method="post" >
-        <div class="flex flex-wrap -mx-3 mb-6">
-        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-        <label class="text-gray-700 text-l font-bold mb-2" for="grid-first-name">
-            Patient ID
-        </label>
-        <a href="searchpatient.php" target ="_blank"><div class="text-blue-700 underline hover:underline-offset-4 ml-24"> View All Patient IDs</div></a>
-        <input class=" w-full  text-gray-700 border rounded py-3 px-4 mb-3 " id="grid-first-name" name="patient_ID"" type="text" required>
-        </div>
-        <div class="w-full md:w-1/2 px-3">
-        <label class="text-gray-700 text-l font-bold mb-2" for="grid-last-name">
-            Organ ID
-        </label>
-        <a href="organs.php" target ="_blank"><div class="text-blue-700 underline hover:underline-offset-4 ml-24"> View All Organ IDs</div></a>
-        <input class=" w-full text-gray-700 border rounded py-3 px-4 id="grid-last-name" name="organ_ID" type="text" required>
-        </div>
-        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-        <label class="text-gray-700 text-l font-bold mb-2" for="grid-first-name">
-            Date
-        </label>
-        <input class=" w-full text-gray-700 border rounded py-3 px-4 mb-3 " id="grid-first-name" name="date" type="date" required>
-        </div>
-        <div class="w-full px-3">
-        <label class="text-gray-700 text-l font-bold mb-2" for="grid-password">
-            Status
-        </label>
-        <input class="w-full text-gray-700 border  rounded py-3 px-4 mb-3 " id="grid-password" name="status" required>
-        </div>
-    </div>
-    <button class="bg-red-500 text-white px-4 py-2 rounded-lg mt-2 mb-6 ml-36 " type="submit">Register New Transplant</button>
-</form>
+        <form class="w-full max-w-lg" action="./transplants.php" bg-gray-500 shadow-md rounded" method="post">
+            <div class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="text-gray-700 text-l font-bold mb-2" for="grid-first-name">
+                        Patient ID
+                    </label>
+                    <a href="searchpatient.php" target="_blank">
+                        <div class="text-blue-700 underline hover:underline-offset-4 ml-24"> View All Patient IDs</div>
+                    </a>
+                    <input class=" w-full  text-gray-700 border rounded py-3 px-4 mb-3 " id="grid-first-name"
+                        name="patient_ID"" type=" text" required>
+                </div>
+                <div class="w-full md:w-1/2 px-3">
+                    <label class="text-gray-700 text-l font-bold mb-2" for="grid-last-name">
+                        Organ ID
+                    </label>
+                    <a href="organs.php" target="_blank">
+                        <div class="text-blue-700 underline hover:underline-offset-4 ml-24"> View All Organ IDs</div>
+                    </a>
+                    <input class=" w-full text-gray-700 border rounded py-3 px-4 id=" grid-last-name" name="organ_ID"
+                        type="text" required>
+                </div>
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="text-gray-700 text-l font-bold mb-2" for="grid-first-name">
+                        Date
+                    </label>
+                    <input class=" w-full text-gray-700 border rounded py-3 px-4 mb-3 " id="grid-first-name" name="date"
+                        type="date" required>
+                </div>
+                <div class="w-full px-3">
+                    <label class="text-gray-700 text-l font-bold mb-2" for="grid-password">
+                        Status
+                    </label>
+                    <input class="w-full text-gray-700 border  rounded py-3 px-4 mb-3 " id="grid-password" name="status"
+                        required>
+                </div>
+            </div>
+            <button class="bg-red-500 text-white px-4 py-2 rounded-lg mt-2 mb-6 ml-36 " type="submit">Register New
+                Transplant</button>
+        </form>
     </div>
     <div class="flex justify-center">
-    <a href="successfultransplants.php"><button type="button" class="  text-white bg-red-500 hover:bg-red-700 focus:ring-4 rounded-lg text-sm px-5 py-3 text-center inline-flex items-center">View All Successful Transplants
-</button></a></div>
+        <a href="successfultransplants.php"><button type="button"
+                class="  text-white bg-red-500 hover:bg-red-700 focus:ring-4 rounded-lg text-sm px-5 py-3 text-center inline-flex items-center">View
+                All Successful Transplants
+            </button></a>
+    </div>
+
+    <!-- footer -->
+    <footer class="flex items-center justify-center h-24 bg-black text-white">
+        <div class="container mx-auto flex items-center">
+            <span class="mr-2">
+                <img src="images/logo.png" alt="Footer Icon" class="h-10 w-10">
+            </span>
+            <span class="text-lg">© 2023 LifeLink. All rights reserved.</span>
+        </div>
+        <div class="ml-4">
+            <span>
+                <a href="https://github.com/RayLikesAnime/LifeLink">
+                    <img src="images/github.png" alt="Another Icon" class="h-16 w-16 mx-20">
+                </a>
+            </span>
+        </div>
+    </footer>
 </body>
+
 </html>

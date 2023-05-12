@@ -20,6 +20,7 @@ if(isset($_POST['logout'])){
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,6 +29,7 @@ if(isset($_POST['logout'])){
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
     <header>
         <nav class="bg-black text-white p-2 flex justify-between items-center sticky">
@@ -39,7 +41,7 @@ if(isset($_POST['logout'])){
                 <li class="text-lg font-semibold px-4"><a href="./Userpage.php">Home</a></li>
                 <li class="text-lg font-semibold px-4">
                     <form action="./Login.php" method="post">
-                         <input type="submit" name="logout" value="Logout">
+                        <input type="submit" name="logout" value="Logout">
                     </form>
                 </li>
             </ul>
@@ -54,54 +56,76 @@ if(isset($_POST['logout'])){
                 </div>
                 <!-- put these buttons in flexbox -->
                 <div class="flex">
-                    <button class="p-3 ml-12 mr-7 border border-red text-s rounded-3xl"><a href="./transplants.php">Transplants</a><button> 
-                    <button class="p-3   border border-red rounded-3xl"><a href="./organsuserpage.php">Show all organs</a><button> 
+                    <button class="p-3 ml-12 mr-7 border border-red text-s rounded-3xl"><a
+                            href="./transplants.php">Transplants</a><button>
+                            <button class="p-3   border border-red rounded-3xl"><a href="./organsuserpage.php">Show all
+                                    organs</a><button>
                 </div>
-                
+
             </div>
             <div class="w-1/2 flex justify-center items-center">
-                <img src="./images/welcome.jpg" alt="welcome" class="h-64" >
+                <img src="./images/welcome.jpg" alt="welcome" class="h-64">
             </div>
         </div>
-        
+
         <div class="flex justify-around pt-20">
             <div class="w-64 h-64 bg-black text-white rounded-3xl p-4">
-               <img src="./images/patient.png" alt="patient" class="mx-auto pt-4">
-               <h3 class="text-xl font-semibold text-center pt-4">Patients</h3>
-               <div class="flex justify-center mt-6">
-                    <button class="p-3 border border-white rounded-3xl"><a href="./patient.php">Go to patients</a><button> 
-               </div>
+                <img src="./images/patient.png" alt="patient" class="mx-auto pt-4">
+                <h3 class="text-xl font-semibold text-center pt-4">Patients</h3>
+                <div class="flex justify-center mt-6">
+                    <button class="p-3 border border-white rounded-3xl"><a href="./patient.php">Go to
+                            patients</a><button>
+                </div>
             </div>
             <div class="w-64 h-64 bg-black text-white rounded-3xl p-4">
-              <img src="./images/donor.png" alt="donor" class="mx-auto pt-4">
-               <h3 class="text-xl font-semibold text-center pt-4">Donors</h3>
-               <div class="flex justify-center mt-6">
-                    <button class="p-3 border border-white rounded-3xl"><a href="./Donor.php">Go to Donors</a><button> 
-               </div>
+                <img src="./images/donor.png" alt="donor" class="mx-auto pt-4">
+                <h3 class="text-xl font-semibold text-center pt-4">Donors</h3>
+                <div class="flex justify-center mt-6">
+                    <button class="p-3 border border-white rounded-3xl"><a href="./Donor.php">Go to Donors</a><button>
+                </div>
             </div>
             <div class="w-64 h-64 bg-black text-white rounded-3xl p-4">
                 <img src="./images/doctor.png" alt="doctor" class="mx-auto pt-4">
-               <h3 class="text-xl font-semibold text-center pt-4">Doctors</h3>
-               <div class="flex justify-center mt-6">
-                    <button class="p-3 border border-white rounded-3xl"><a href="./Doctor.php">Go to Doctors</a><button> 
-               </div>
+                <h3 class="text-xl font-semibold text-center pt-4">Doctors</h3>
+                <div class="flex justify-center mt-6">
+                    <button class="p-3 border border-white rounded-3xl"><a href="./Doctor.php">Go to Doctors</a><button>
+                </div>
             </div>
             <div class="w-64 h-64 bg-black text-white rounded-3xl p-4">
                 <img src="./images/hospital.png" alt="hospital" class="mx-auto pt-4">
-               <h3 class="text-xl font-semibold text-center pt-4">Hospitals</h3>
-               <div class="flex justify-center mt-6">
-                    <button class="p-3 border border-white rounded-3xl"><a href="./hospital.php">Go to Hospitals</a><button> 
-               </div>
+                <h3 class="text-xl font-semibold text-center pt-4">Hospitals</h3>
+                <div class="flex justify-center mt-6">
+                    <button class="p-3 border border-white rounded-3xl"><a href="./hospital.php">Go to
+                            Hospitals</a><button>
+                </div>
             </div>
             <div class="w-64 h-64 bg-black text-white rounded-3xl p-4">
-               <img src="./images/admin.png" alt="admin" class="mx-auto pt-4">
-               <h3 class="text-xl font-semibold text-center pt-4">New Admin</h3>
-               <div class="flex justify-center mt-6">
-                    <button class="p-3 border border-white rounded-3xl"><a href="./Signup.php">Add new admin</a><button> 
-               </div>
+                <img src="./images/admin.png" alt="admin" class="mx-auto pt-4">
+                <h3 class="text-xl font-semibold text-center pt-4">New Admin</h3>
+                <div class="flex justify-center mt-6">
+                    <button class="p-3 border border-white rounded-3xl"><a href="./Signup.php">Add new admin</a><button>
+                </div>
             </div>
         </div>
     </main>
-   
+
+    <!-- footer -->
+    <footer class="flex items-center justify-center h-24 bg-black text-white">
+        <div class="container mx-auto flex items-center">
+            <span class="mr-2">
+                <img src="images/logo.png" alt="Footer Icon" class="h-10 w-10">
+            </span>
+            <span class="text-lg">© 2023 LifeLink. All rights reserved.</span>
+        </div>
+        <div class="ml-4">
+            <span>
+                <a href="https://github.com/RayLikesAnime/LifeLink">
+                    <img src="images/github.png" alt="Another Icon" class="h-16 w-16 mx-20">
+                </a>
+            </span>
+        </div>
+    </footer>
+
 </body>
+
 </html>

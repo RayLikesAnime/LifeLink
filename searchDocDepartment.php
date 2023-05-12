@@ -172,6 +172,23 @@ $departments = mysqli_fetch_all($department_query, MYSQLI_ASSOC);
 		}
 		?>
     </div>
+
+	<!-- footer -->
+	<footer class="flex items-center justify-center h-24 bg-black text-white">
+        <div class="container mx-auto flex items-center">
+            <span class="mr-2">
+                <img src="images/logo.png" alt="Footer Icon" class="h-10 w-10">
+            </span>
+            <span class="text-lg">© 2023 LifeLink. All rights reserved.</span>
+        </div>
+        <div class="ml-4">
+            <span>
+                <a href="https://github.com/RayLikesAnime/LifeLink">
+                    <img src="images/github.png" alt="Another Icon" class="h-16 w-16 mx-20">
+                </a>
+            </span>
+        </div>
+    </footer>
 </body>
 
 </html>

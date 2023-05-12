@@ -56,6 +56,7 @@ echo "<script type='text/javascript'>alert('$message');</script>";
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -63,20 +64,22 @@ echo "<script type='text/javascript'>alert('$message');</script>";
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Patient</title>
 </head>
+
 <body>
-<header>
+    <header>
         <nav class="bg-black text-white p-2 flex justify-between items-center sticky">
             <div class="ml-4 flex items-center">
                 <img src="./images/logo.png" alt="">
                 <h1 class="text-3xl ml-2 font-semibold">LifeLink</h1>
-                <a href="patient.php"><button type="button" class=" ml-5 text-white bg-red-500 hover:bg-red-700 focus:ring-4 rounded-lg text-sm px-4 py-2 text-center inline-flex items-center">Back
-</button></a>
+                <a href="patient.php"><button type="button"
+                        class=" ml-5 text-white bg-red-500 hover:bg-red-700 focus:ring-4 rounded-lg text-sm px-4 py-2 text-center inline-flex items-center">Back
+                    </button></a>
             </div>
             <ul class="flex justify-evenly mr-8">
                 <li class="text-lg font-semibold px-4"><a href="./Userpage.php">Home</a></li>
                 <li class="text-lg font-semibold px-4">
                     <form action="./Login.php" method="post">
-                         <input type="submit" name="logout" value="Logout">
+                        <input type="submit" name="logout" value="Logout">
                     </form>
                 </li>
             </ul>
@@ -84,78 +87,107 @@ echo "<script type='text/javascript'>alert('$message');</script>";
     </header>
     <h1 class="text-4xl flex justify-center mt-7 font-bold">Register Patient</h1>
     <div class="flex justify-center mt-9">
-    <form class="w-full max-w-lg" action="./registerpatient.php"  bg-gray-500 shadow-md rounded method="post" >
-        <div class="flex flex-wrap -mx-3 mb-6">
-        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-        <label class="text-gray-700 text-l font-bold mb-2" for="grid-first-name">
-            First Name
-        </label>
-        <input class=" w-full  text-gray-700 border rounded py-3 px-4 mb-3 " id="grid-first-name" name="firstname" type="text" required>
-        </div>
-        <div class="w-full md:w-1/2 px-3">
-        <label class="text-gray-700 text-l font-bold mb-2" for="grid-last-name">
-            Last Name
-        </label>
-        <input class=" w-full text-gray-700 border rounded py-3 px-4" id="grid-last-name" name="lastname" type="text">
-        </div>
-        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-        <label class="text-gray-700 text-l font-bold mb-2" for="doctor">
-            Doctor ID
-        </label>
-        <a href="searchDoctorOption.php" target ="_blank"><div class="text-blue-700 underline hover:underline-offset-4 ml-40"> view doctor</div></a>
-        <input class=" w-full text-gray-700 border rounded py-3 px-4 mb-3 " id="doctor" name="doctor" type="text" required>
-        </div>
-        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-        <label class="text-gray-700 text-L font-bold mb-2" for="grid-age">
-            Age
-        </label>
-        <input class="w-full text-gray-700 border rounded py-3 px-4" id="grid-age" name="age" type="number" required>
-        </div>
-        <div class="w-full px-3">
-        <label class="text-gray-700 text-l font-bold mb-2" for="grid-medical-history">
-            Medical History
-        </label>
-        <input class="w-full text-gray-700 border  rounded py-3 px-4 mb-3 " id="grid-medical-history" name="medicalhistory" required>
-        </div>
-        <div class="w-full px-3">
-        <label class="text-gray-700 text-l font-bold mb-2" for="grid-address1">
-            Address1
-        </label>
-        <input class="w-full text-gray-700 border rounded py-3 px-4 mb-3" id="grid-address1" name="address" required>
-        </div>
-        <div class="w-full px-3">
-        <label class="text-gray-700 text-l font-bold mb-2">
-            Address2
-        </label>
-        <input class="w-full  text-gray-700 border  rounded py-3 px-4 mb-3" name="address2">
-        </div>
-        <div class="w-full px-3">
-        <label class="text-gray-700 text-l font-bold mb-2" for="grid-address3">
-            Address3
-        </label>
-        <input class="w-full text-gray-700 border  rounded py-3 px-4 mb-3" name="address3" >
-        </div>
-        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-        <label class="text-gray-700 text-l font-bold mb-2" for="grid-phone">
-            Phone
-        </label>
-        <input class=" w-full  text-gray-700 border  rounded py-3 px-4" id="grid-phone" type="tel" required pattern="[0-9]{10}" name="phone" required>
-        </div>
-        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-        <label class=" text-gray-700 text-l font-bold mb-2" for="grid-blood-group">
-            Blood Group
-        </label>
-        <input class="w-full text-gray-700 border  rounded py-3 px-4 " id="grid-blood-group" name="bloodgroup" type="text" required>
-        
-        
-        </div>
-        <label class="block text-gray-700 text-sm font-bold mb-2 mt-4 w-full rounded px-2" for="organ">
-        Organ Required
-      </label>
-      <input class=" border rounded w-full py-3 px-4 text-gray-700 mb-3 w-full" id="organ" name="organ" type="text" required>
+        <form class="w-full max-w-lg" action="./registerpatient.php" bg-gray-500 shadow-md rounded method="post">
+            <div class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="text-gray-700 text-l font-bold mb-2" for="grid-first-name">
+                        First Name
+                    </label>
+                    <input class=" w-full  text-gray-700 border rounded py-3 px-4 mb-3 " id="grid-first-name"
+                        name="firstname" type="text" required>
+                </div>
+                <div class="w-full md:w-1/2 px-3">
+                    <label class="text-gray-700 text-l font-bold mb-2" for="grid-last-name">
+                        Last Name
+                    </label>
+                    <input class=" w-full text-gray-700 border rounded py-3 px-4" id="grid-last-name" name="lastname"
+                        type="text">
+                </div>
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="text-gray-700 text-l font-bold mb-2" for="doctor">
+                        Doctor ID
+                    </label>
+                    <a href="searchDoctorOption.php" target="_blank">
+                        <div class="text-blue-700 underline hover:underline-offset-4 ml-40"> view doctor</div>
+                    </a>
+                    <input class=" w-full text-gray-700 border rounded py-3 px-4 mb-3 " id="doctor" name="doctor"
+                        type="text" required>
+                </div>
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="text-gray-700 text-L font-bold mb-2" for="grid-age">
+                        Age
+                    </label>
+                    <input class="w-full text-gray-700 border rounded py-3 px-4" id="grid-age" name="age" type="number"
+                        required>
+                </div>
+                <div class="w-full px-3">
+                    <label class="text-gray-700 text-l font-bold mb-2" for="grid-medical-history">
+                        Medical History
+                    </label>
+                    <input class="w-full text-gray-700 border  rounded py-3 px-4 mb-3 " id="grid-medical-history"
+                        name="medicalhistory" required>
+                </div>
+                <div class="w-full px-3">
+                    <label class="text-gray-700 text-l font-bold mb-2" for="grid-address1">
+                        Address1
+                    </label>
+                    <input class="w-full text-gray-700 border rounded py-3 px-4 mb-3" id="grid-address1" name="address"
+                        required>
+                </div>
+                <div class="w-full px-3">
+                    <label class="text-gray-700 text-l font-bold mb-2">
+                        Address2
+                    </label>
+                    <input class="w-full  text-gray-700 border  rounded py-3 px-4 mb-3" name="address2">
+                </div>
+                <div class="w-full px-3">
+                    <label class="text-gray-700 text-l font-bold mb-2" for="grid-address3">
+                        Address3
+                    </label>
+                    <input class="w-full text-gray-700 border  rounded py-3 px-4 mb-3" name="address3">
+                </div>
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="text-gray-700 text-l font-bold mb-2" for="grid-phone">
+                        Phone
+                    </label>
+                    <input class=" w-full  text-gray-700 border  rounded py-3 px-4" id="grid-phone" type="tel" required
+                        pattern="[0-9]{10}" name="phone" required>
+                </div>
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class=" text-gray-700 text-l font-bold mb-2" for="grid-blood-group">
+                        Blood Group
+                    </label>
+                    <input class="w-full text-gray-700 border  rounded py-3 px-4 " id="grid-blood-group"
+                        name="bloodgroup" type="text" required>
+
+
+                </div>
+                <label class="block text-gray-700 text-sm font-bold mb-2 mt-4 w-full rounded px-2" for="organ">
+                    Organ Required
+                </label>
+                <input class=" border rounded w-full py-3 px-4 text-gray-700 mb-3 w-full" id="organ" name="organ"
+                    type="text" required>
+            </div>
+            <button class="bg-red-500 text-white px-4 py-2 rounded-lg mt-2 mb-6 ml-48 " type="submit">Register</button>
+        </form>
     </div>
-    <button class="bg-red-500 text-white px-4 py-2 rounded-lg mt-2 mb-6 ml-48 " type="submit">Register</button>
-</form>
-    </div>
+
+    <!-- footer -->
+    <footer class="flex items-center justify-center h-24 bg-black text-white">
+        <div class="container mx-auto flex items-center">
+            <span class="mr-2">
+                <img src="images/logo.png" alt="Footer Icon" class="h-10 w-10">
+            </span>
+            <span class="text-lg">© 2023 LifeLink. All rights reserved.</span>
+        </div>
+        <div class="ml-4">
+            <span>
+                <a href="https://github.com/RayLikesAnime/LifeLink">
+                    <img src="images/github.png" alt="Another Icon" class="h-16 w-16 mx-20">
+                </a>
+            </span>
+        </div>
+    </footer>
 </body>
+
 </html>
