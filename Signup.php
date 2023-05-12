@@ -121,7 +121,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
                 <form action="./Signup.php" method="post">
                     <div class="flex flex-col justify-center items-center">
                         <input type="text" id="username" name="username" placeholder="Username" class="border-2 border-black rounded-lg p-2 mt-4" required>
-                        <input type="text" id="email" name="email" placeholder="Email ID" class="border-2 border-black rounded-lg p-2 mt-4" required>
+                        <input type="email" id="email" name="email" placeholder="Email ID" class="border-2 border-black rounded-lg p-2 mt-4" required>
                         <input type="password" id="password" name="password" placeholder="Password" class="border-2 border-black rounded-lg p-2 mt-4" required>
                         <input type="password" id="cpassword" name="cpassword" placeholder="Confirm Password" class="border-2 border-black rounded-lg p-2 mt-4" required>
                         <button class="bg-red-500 text-white px-4 py-2 rounded-lg mt-2">SignUp</button>
